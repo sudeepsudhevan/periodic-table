@@ -2,6 +2,8 @@
 
 A modern, responsive, and Docker-ready Periodic Table of Elements application. This project demonstrates an Agile workflow, CI/CD integration, and automated testing.
 
+**[🔴 Live Demo](https://sudeepsudhevan.github.io/periodic-table/)**
+
 ## 🚀 Features
 
 -   **Interactive Table**: Click on any element (H to Og) to view detailed properties.
