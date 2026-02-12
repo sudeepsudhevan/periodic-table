@@ -1,0 +1,42 @@
+[
+    {
+        "atomicNumber": 1,
+        "symbol": "H",
+        "name": "Hydrogen",
+        "atomicMass": "1.008",
+        "category": "reactive-non-metal",
+        "summary": "Hydrogen is a chemical element with symbol H and atomic number 1. With a standard atomic weight of 1.008, hydrogen is the lightest element on the periodic table."
+    },
+    {
+        "atomicNumber": 2,
+        "symbol": "He",
+        "name": "Helium",
+        "atomicMass": "4.0026",
+        "category": "noble-gas",
+        "summary": "Helium is a chemical element with symbol He and atomic number 2. It is a colorless, odorless, tasteless, non-toxic, inert, monatomic gas, the first in the noble gas group in the periodic table."
+    },
+    {
+        "atomicNumber": 3,
+        "symbol": "Li",
+        "name": "Lithium",
+        "atomicMass": "6.94",
+        "category": "alkali-metal",
+        "summary": "Lithium is a chemical element with symbol Li and atomic number 3. It is a soft, silvery-white alkali metal. Under standard conditions, it is the lightest metal and the lightest solid element."
+    },
+    {
+        "atomicNumber": 8,
+        "symbol": "O",
+        "name": "Oxygen",
+        "atomicMass": "15.999",
+        "category": "reactive-non-metal",
+        "summary": "Oxygen is a chemical element with symbol O and atomic number 8. It is a member of the chalcogen group on the periodic table, a highly reactive nonmetal, and an oxidizing agent that readily forms oxides with most elements as well as with other compounds."
+    },
+    {
+        "atomicNumber": 79,
+        "symbol": "Au",
+        "name": "Gold",
+        "atomicMass": "196.97",
+        "category": "transition-metal",
+        "summary": "Gold is a chemical element with symbol Au (from Latin: aurum) and atomic number 79, making it one of the higher atomic number elements that occur naturally. In a pure form, it is a bright, slightly reddish yellow, dense, soft, malleable, and ductile metal."
+    }
+]
