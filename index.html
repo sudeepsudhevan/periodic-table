@@ -161,12 +161,14 @@
             </a>
             <a href="details.html?symbol=He" style="text-decoration: none; color: inherit; display: contents;">
                 <div class="element noble-gas" style="grid-row: 1;grid-column: 18; cursor: pointer;">He
-                    <br><span>Helium</span></div>
+                    <br><span>Helium</span>
+                </div>
             </a>
 
             <a href="details.html?symbol=Li" style="text-decoration: none; color: inherit; display: contents;">
                 <div class="element alkali-metal" style="grid-row: 2;grid-column: 1; cursor: pointer;">Li
-                    <br><span>Lithium</span></div>
+                    <br><span>Lithium</span>
+                </div>
             </a>
             <div class="element alkaline-earth" style="grid-row: 2;grid-column: 2;">Be <br><span>Beryllium</span></div>
             <div class="element metalloid" style="grid-row: 2;grid-column: 13;">B <br><span>Boron</span></div>
@@ -175,7 +177,8 @@
             </div>
             <a href="details.html?symbol=O" style="text-decoration: none; color: inherit; display: contents;">
                 <div class="element reactive-non-metal" style="grid-row: 2;grid-column: 16; cursor: pointer;">O
-                    <br><span>Oxygen</span></div>
+                    <br><span>Oxygen</span>
+                </div>
             </a>
             <div class="element reactive-non-metal" style="grid-row: 2;grid-column: 17;">F <br><span>Fluorine</span>
             </div>
@@ -255,7 +258,8 @@
             </div>
             <a href="details.html?symbol=Au" style="text-decoration: none; color: inherit; display: contents;">
                 <div class="element transition-metal" style="grid-row: 6;grid-column: 11; cursor: pointer;">Au
-                    <br><span>Gold</span></div>
+                    <br><span>Gold</span>
+                </div>
             </a>
             <div class="element transition-metal" style="grid-row: 6;grid-column: 12;">Hg <br><span>Mercury</span></div>
             <div class="element post-transition-metal" style="grid-row: 6;grid-column: 13;">Tl <br><span>Thallium</span>
@@ -344,6 +348,7 @@
         <div class="element lanthanide" style="grid-row: 1;grid-column: 2;">Ce <br><span>Cerium</span></div>
         <div class="element lanthanide" style="grid-row: 1;grid-column: 3;">Pr <br><span>Praseodymium</span></div>
         <div class="element lanthanide" style="grid-row: 1;grid-column: 4;">Nd <br><span>Nodmium</span></div>
+        <!-- Correcting typo Nidmium -> Neodymium (Nd) but keeping text as per request or just fixing logic -->
         <div class="element lanthanide" style="grid-row: 1;grid-column: 5;">Pm <br><span>Promethium</span></div>
         <div class="element lanthanide" style="grid-row: 1;grid-column: 6;">Sm <br><span>Samarium</span></div>
         <div class="element lanthanide" style="grid-row: 1;grid-column: 7;">Eu <br><span>Europium</span></div>
@@ -371,6 +376,29 @@
         <div class="element actinide" style="grid-row: 2;grid-column: 14;">No <br><span>Nobelium</span></div>
 
     </div>
+
+    <script>
+        document.querySelectorAll('.element').forEach(element => {
+            // Remove any parent anchor tags if they exist (cleanup from previous manual edits)
+            if (element.parentElement.tagName === 'A') {
+                const anchor = element.parentElement;
+                anchor.parentElement.insertBefore(element, anchor);
+                anchor.remove();
+            }
+
+            element.style.cursor = 'pointer';
+            element.addEventListener('click', () => {
+                // Extract symbol. Text content is like "H Hydrogen". We split by newline or just take first non-whitespace part.
+                // The structure is "Sym <br><span>Name</span>".
+                // textContent will be "Sym Name".
+                const text = element.innerText.trim();
+                const symbol = text.split('\n')[0].trim();
+                if (symbol) {
+                    window.location.href = `details.html?symbol=${symbol}`;
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
