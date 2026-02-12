@@ -102,8 +102,9 @@
             margin-right: 0.35rem;
         }
 
-        /* Mobile Responsiveness */
-        @media (max-width: 900px) {
+        /* Mobile & Tablet Responsiveness */
+        /* Increased breakpoint to 1100px to handle tablet screens */
+        @media (max-width: 1100px) {
             .container {
                 flex-direction: column;
             }
@@ -112,17 +113,17 @@
                 width: 100%;
                 margin: 0;
                 overflow-x: auto;
-                /* Force a min-width to keep the table shape intact while scrolling */
-                min-width: 800px;
+                /* Increased min-width to 1100px for better readability */
+                min-width: 1100px;
                 padding-bottom: 20px;
             }
 
             /* To allow the left-div to scroll, we need to ensure its parent doesn't constrain it too tightly if it was flex */
-            /* But .left-div is a grid. To make the whole grid scroll, the grid container needs overflow-x: auto 
-               and the items need to preserve their width. 
+            /* But .left-div is a grid. To make the whole grid scroll, the grid container needs overflow-x: auto
+               and the items need to preserve their width.
                Ideally, we wrap the grid in a scroll container, but trying to do it with existing structure.
-               Setting min-width on the grid container works if the parent allows scrolling? 
-               Actually, in flex column, width 100% is fine. 
+               Setting min-width on the grid container works if the parent allows scrolling?
+               Actually, in flex column, width 100% is fine.
                We need a wrapper for scrolling usually, but let's try setting overflow on left-div itself. */
 
             .right-div {
